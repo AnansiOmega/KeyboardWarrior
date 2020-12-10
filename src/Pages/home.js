@@ -70,24 +70,30 @@ export const Home = () => {
         setRaceCompleted(false);
     }
 
-    // const renderLines = () => {
-    //     lyrics.map((line, i) => {
-    //         if(position < i){
-    //             return <div>{line}</div>
-    //         }
-    //     })
-    // }
-    // renderLines()
+    const renderLines = () => {
+        let typedArray = []
+        lyrics.map((line, i) => {
+            if(position > i){
+                return typedArray.push(line)
+            }
+        })
+
+    return typedArray.map((line,i) => {
+        let name = i % 2 === 0 ? 'typed-line-right' : 'typed-line-left'
+        return <div className={name}>{line}</div>
+    })
+    }
+    
 
     let wpm = Math.round((wordCount / timer) * 60) || "";
     return(
         <>
-            <div>{wpm}</div>
+        <div>{renderLines()}</div>
             { startRace ?
                 <form>
-                    {/* {renderLines()} */}
-                    <div>{lyrics[position]}</div>
+                    <div className='line'>{lyrics[position]}</div>
                     <input type='text' onChange={handleInput} value={input}></input>
+                    <div>{wpm}</div>
                 </form>
                 : newRace ?
                     <form onSubmit={handleSubmit}>

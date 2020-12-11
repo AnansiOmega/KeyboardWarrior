@@ -1,8 +1,3 @@
-.App {
-  text-align: center;
-}
-
-
 @keyframes slide-in-right {
   from {
     margin-left: 100%;
@@ -34,4 +29,43 @@
   animation-name: slide-in-left;
   animation-duration: 7s;
   position: relative;
+}
+
+div.race-btn {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.song-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.typing-input {
+  margin: 0 auto;
+  width: 500px;
+  /* display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* margin-top: 500px; */
+}
+
+div.words-to-type {
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 540px;
+}
+
+div.prev-words {
+  text-align: center;
+}
+
+nav.navbar.narbar-expand-lg {
+  background-color: white;
 }

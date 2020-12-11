@@ -12,7 +12,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <div >
         <Navbar/>
+        </div>
         <Switch>
           <Route exact path='/' component={login}/>
           <Route path='/home' component={Home}/>

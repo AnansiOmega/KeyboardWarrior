@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Button, Form } from 'react-bootstrap/'
 
 export const Home = () => {
     
@@ -88,22 +89,25 @@ export const Home = () => {
     let wpm = Math.round((wordCount / timer) * 60) || "";
     return(
         <>
-        <div>{renderLines()}</div>
+        <div className='prev-words'>{renderLines()}</div>
             { startRace ?
-                <form>
-                    <div className='line'>{lyrics[position]}</div>
-                    <input type='text' onChange={handleInput} value={input}></input>
-                    <div>{wpm}</div>
-                </form>
+            <>
+                <div className='words-to-type'>{lyrics[position]}
+                <Form className='typing-input'>
+                    <Form.Control size='lg' type='text' onChange={handleInput} value={input}/>
+                </Form>
+                </div>
+                <div>{wpm}</div>
+            </>
                 : newRace ?
-                    <form onSubmit={handleSubmit}>
-                        <input onChange={handleChange} placeholder="Artist" type='text' value={artist} name='artist'></input>
-                        <input onChange={handleChange} placeholder="Track" type='text' value={track} name='track'></input>
-                        <input type='submit'></input>
-                    </form>
+                <Form className='song-form' onSubmit={handleSubmit}>
+                    <Form.Control size='lg' onChange={handleChange} placeholder="Artist" type='text' value={artist} name='artist'/>
+                    <Form.Control size='lg' onChange={handleChange} placeholder="Track" type='text' value={track} name='track'/>
+                    <Button variant='dark' size='lg' type='submit'>Start</Button>
+                </Form>
                     : raceCompleted ?
                     <div> Nice, you just wrote out the song {track} by {artist} in {wpm} words per minute! <button onClick={reset}>reset</button></div>
-                        : <button onClick={() => setNewRace(true)}>Start a new Race</button> 
+                        : <div className='race-btn'><Button size='lg' variant='dark' onClick={() => setNewRace(true)}>Start a new Race</Button></div>
             }
         </>
     )

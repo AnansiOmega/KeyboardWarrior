@@ -29,7 +29,7 @@ const App = () => {
           <Navbar color={color}/>
           </div>
           <Switch>
-            <Route exact path='/' component={() => <Info color={color}/>}/>
+            <Route exact path='/info' component={() => <Info color={color}/>}/>
             <Route path='/home' component={() => <Home changeBackground={changeBackground} light={light} color={color} />}/>
           </Switch>
         </div>

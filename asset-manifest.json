@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/KeyboardWarrior/static/css/main.77f2be6e.chunk.css",
-    "main.js": "/KeyboardWarrior/static/js/main.dd3d7af0.chunk.js",
-    "main.js.map": "/KeyboardWarrior/static/js/main.dd3d7af0.chunk.js.map",
+    "main.js": "/KeyboardWarrior/static/js/main.3dfdd79a.chunk.js",
+    "main.js.map": "/KeyboardWarrior/static/js/main.3dfdd79a.chunk.js.map",
     "runtime-main.js": "/KeyboardWarrior/static/js/runtime-main.35127139.js",
     "runtime-main.js.map": "/KeyboardWarrior/static/js/runtime-main.35127139.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/KeyboardWarrior/static/css/2.20aa2d7b.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.2f704e5e.chunk.js",
     "static/css/main.77f2be6e.chunk.css",
-    "static/js/main.dd3d7af0.chunk.js"
+    "static/js/main.3dfdd79a.chunk.js"
   ]
 }

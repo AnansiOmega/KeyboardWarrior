@@ -33,7 +33,7 @@
 
 div.race-btn {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 10px;
 }
 
 .song-form {
@@ -49,23 +49,57 @@ div.race-btn {
 .typing-input {
   margin: 0 auto;
   width: 500px;
-  /* display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  
-  /* margin-top: 500px; */
 }
 
 div.words-to-type {
   margin: 0 auto;
-  width: 500px;
-  margin-top: 540px;
+  width: 700px;
+  margin-top: 300px;
+  font-size: 1.25rem;
+  
 }
 
 div.prev-words {
   text-align: center;
+  font-size: 1.25rem;
 }
 
-nav.navbar.narbar-expand-lg {
-  background-color: white;
+div.wpm {
+  font-size: 1.25rem;
+  position: absolute;
+  top: 152px;
+  left: 710px;
+}
+
+div.wpm-corner {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+div.final-words {
+  text-align: center;
+}
+
+div.info {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1000px;
+}
+
+div.page-btn {
+  text-align: center;
+}
+
+.questions {
+  font-size: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0rem;
+}
+
+div.error { 
+  color: red;
 }

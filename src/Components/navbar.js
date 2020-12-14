@@ -8,7 +8,7 @@ const NavBar = ({color}) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href='/KeyboardWarrior/home' style={color}>Home</Nav.Link>
+            <Nav.Link href='/KeyboardWarrior/' style={color}>Home</Nav.Link>
             <Nav.Link href='/KeyboardWarrior/info' style={color}>Info</Nav.Link>
           </Nav>
         </Navbar.Collapse>

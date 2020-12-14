@@ -30,7 +30,7 @@ const App = () => {
           </div>
           <Switch>
             <Route exact path='/info' component={() => <Info color={color}/>}/>
-            <Route path='/home' component={() => <Home changeBackground={changeBackground} light={light} color={color} />}/>
+            <Route path='/' component={() => <Home changeBackground={changeBackground} light={light} color={color} />}/>
           </Switch>
         </div>
       );

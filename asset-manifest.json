@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/KeyboardWarrior/static/css/main.77f2be6e.chunk.css",
+    "main.js": "/KeyboardWarrior/static/js/main.dd3d7af0.chunk.js",
+    "main.js.map": "/KeyboardWarrior/static/js/main.dd3d7af0.chunk.js.map",
+    "runtime-main.js": "/KeyboardWarrior/static/js/runtime-main.35127139.js",
+    "runtime-main.js.map": "/KeyboardWarrior/static/js/runtime-main.35127139.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/KeyboardWarrior/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.2f704e5e.chunk.js": "/KeyboardWarrior/static/js/2.2f704e5e.chunk.js",
+    "static/js/2.2f704e5e.chunk.js.map": "/KeyboardWarrior/static/js/2.2f704e5e.chunk.js.map",
+    "static/js/3.7bc014e8.chunk.js": "/KeyboardWarrior/static/js/3.7bc014e8.chunk.js",
+    "static/js/3.7bc014e8.chunk.js.map": "/KeyboardWarrior/static/js/3.7bc014e8.chunk.js.map",
+    "index.html": "/KeyboardWarrior/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/KeyboardWarrior/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.77f2be6e.chunk.css.map": "/KeyboardWarrior/static/css/main.77f2be6e.chunk.css.map",
+    "static/js/2.2f704e5e.chunk.js.LICENSE.txt": "/KeyboardWarrior/static/js/2.2f704e5e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35127139.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.2f704e5e.chunk.js",
+    "static/css/main.77f2be6e.chunk.css",
+    "static/js/main.dd3d7af0.chunk.js"
+  ]
+}

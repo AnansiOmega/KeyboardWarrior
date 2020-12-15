@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Icon } from 'semantic-ui-react'
 
 export const Lamp = ({changeBackground, light}) => {
 
@@ -20,7 +20,7 @@ export const Lamp = ({changeBackground, light}) => {
         <div id="lamp" onChange={changeBackground}>
                 <input type="radio" name="switch" value="on" />
                 <input type="radio" name="switch" value="off" />
-                <label htmlFor="switch" className="entypo-lamp"></label>
+                <label htmlFor="switch"><Icon size='huge' name='lightbulb outline'></Icon></label>
                 <div className="lamp">
                     {light ? <div style={bulb}></div> : null }
                     <div className="gonna-give-light"></div>

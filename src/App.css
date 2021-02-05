@@ -1,34 +1,22 @@
 @keyframes slide-in-right {
   from {
-    margin-left: 100%;
-    width: 200%;
+    transform: translateX(1000px) rotate(2000deg);
+    opacity: 0%;
   }
   to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-@keyframes slide-in-left {
-  from {
-    margin-left: -120%;
-    width: 200%;
-  }
-  to {
-    margin-right: 0%;
-    width: 100%;
+    transform: translateX(0px) rotate(0deg);
+    opacity: 100%;
   }
 }
 
-.typed-line-right {
-  animation-name: slide-in-right;
-  animation-duration: 7s;
-  position: relative;
+body {
+  padding-bottom: 1000px;
 }
 
-.typed-line-left {
-  animation-name: slide-in-left;
-  animation-duration: 7s;
+.slide-in-word {
+  animation: slide-in-right 3s forwards;
   position: relative;
+  display: inline-block;
 }
 
 div.race-btn {
@@ -54,14 +42,14 @@ div.race-btn {
 div.words-to-type {
   margin: 0 auto;
   width: 700px;
-  margin-top: 300px;
   font-size: 1.25rem;
-  
 }
 
 div.prev-words {
   text-align: center;
   font-size: 1.25rem;
+  margin-top: 50px;
+  margin-bottom: -50px;
 }
 
 div.wpm {
@@ -102,4 +90,32 @@ div.page-btn {
 
 div.error { 
   color: red;
+}
+
+span{
+  margin: .3rem;
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-100px) rotate(-720deg);
+    opacity: 0%;
+  }
+}
+
+span.good {
+  animation: slide-out-left 2s forwards;
+  display: inline-block;
+}
+
+.input-container {
+  position: fixed;
+  margin-top: 10%;
+  left: 25%;
+  bottom: 0;
+  padding-bottom: 1%;
 }

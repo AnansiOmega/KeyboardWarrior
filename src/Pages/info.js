@@ -17,7 +17,7 @@ export const Info = ({color}) => {
         </div>
         <div className='page-btn'>
             <Link to='/home'>
-            <Button style={color} size='lg' variant='dark'>Next page</Button>
+            <Button style={color} size='lg' variant='dark'>Home Page</Button>
             </Link>
         </div>
         <p className='questions'>Comments, concerns, compliments, criticisms, or any word that starts with 'C' can Tweet me <a href='https://twitter.com/IgnasButautas'>here.</a> Also, if you're lovin' that light you can check out Hornebom's creation <a href='https://codepen.io/Hornebom/pen/clDsr'>here</a></p>

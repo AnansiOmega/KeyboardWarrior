@@ -162,11 +162,11 @@ span{
 @keyframes slide-out-left {
   from {
     transform: translateY(0px) rotate(0deg);
-    opacity: 100%;
+    opacity: 100% !important;
   }
   to {
     transform: translateY(-100px) rotate(-720deg);
-    opacity: 0%;
+    opacity: 0% !important;
   }
 }
 

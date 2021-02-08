@@ -11,8 +11,7 @@ import  Navbar  from './Components/navbar'
 const App = () => {
   const [lightMode, setlightMode] = useState(true)
   useEffect(() => {
-    lightMode ? document.body.style.color = 'rgb(0, 0, 0, 1)' : document.body.style.color = 'rgb(153, 255, 204, 1)'
-    lightMode ? document.body.style.backgroundColor = 'rgb(153, 255, 204, 0.5)' : document.body.style.backgroundColor = 'rgb(0, 0, 0, 0.7)'
+    lightMode ? document.body.className = 'light' : document.body.className = 'dark'
   },[lightMode])
   const [ light, setLight ] = useState(true)
 

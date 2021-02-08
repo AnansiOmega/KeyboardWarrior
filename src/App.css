@@ -9,10 +9,6 @@
   }
 }
 
-body {
-  padding-bottom: 1000px;
-}
-
 .slide-in-word {
   animation: slide-in-right 3s forwards;
   position: relative;
@@ -52,22 +48,16 @@ div.prev-words {
   margin-bottom: -50px;
 }
 
-div.wpm {
-  font-size: 1.25rem;
-  position: absolute;
-  top: 152px;
-  left: 710px;
-}
-
 div.wpm-corner {
-  font-size: 1.25rem;
+  font-size: 3rem;
+  bottom: 10px;
   position: fixed;
-  bottom: 0;
-  left: 0;
+  left: 10px;
 }
 
 div.final-words {
   text-align: center;
+  margin-top: 100px;
 }
 
 div.info {
@@ -118,4 +108,14 @@ span.good {
   left: 25%;
   bottom: 0;
   padding-bottom: 1%;
+}
+
+.light {
+  background-color: rgb(153, 255, 204, 0.5);
+  color: rgb(0, 0, 0, 1);
+}
+
+.dark {
+  background-color: rgb(0, 0, 0, 0.7);
+  color: rgb(153, 255, 204, 1);
 }

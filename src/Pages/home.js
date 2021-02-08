@@ -33,12 +33,13 @@ export const Home = ({changeBackground, light, color}) => {
     const [ error, setError] = useState(false)
     const [ word, setWord ] = useState(0)
     const [ typedArr, setTypedArr ] = useState([])
-
+    const typingInput = useRef(null)
 
     const handleInput = (e) => {
         setInput(e.target.value);
         if( input ===  lyrics[position].split(' ')[word] ){
             document.getElementsByClassName('word-2-type')[0].className = 'good'
+            window.scrollTo(0,document.body.scrollHeight);
             setWord(word + 1);
             setTypedArr([ ...typedArr, lyrics[position].split(' ')[word]])
             setWordCount(wordCount + 1);
@@ -46,17 +47,15 @@ export const Home = ({changeBackground, light, color}) => {
         };
     };
 
-    if (word === lyrics[position].split(' ').length){
+    if (word === lyrics[position]?.split(' ').length){
         Array.from(document.getElementsByClassName('good')).forEach(span => span.className = 'word-2-type')
         setPosition(position + 1);
-        let objDiv = document.getElementsByClassName('typing-input')[0]
-        objDiv.scrollTop = objDiv.scrollHeight;
         setTypedArr([...typedArr, '( ._.)'])
         setWord(0);
     };
 
     const renderLines = () => {
-        return typedArr.map((word, i) => {
+        return typedArr.map(word => {
             if(word === '( ._.)') return <br></br>
         return <span className='slide-in-word'>{word}</span>
     })
@@ -83,6 +82,7 @@ export const Home = ({changeBackground, light, color}) => {
             setStartRace(true);
             setDelay(1000);
             setError(false)
+            typingInput.current.focus()
         })
     }
 
@@ -97,6 +97,7 @@ export const Home = ({changeBackground, light, color}) => {
         setLyrics(['hi']);
         setStartRace(false);
         setRaceCompleted(false);
+        setTypedArr([])
     }
 
 
@@ -108,13 +109,13 @@ export const Home = ({changeBackground, light, color}) => {
         <div className='prev-words'>{renderLines()}</div>
             { startRace ?
             <>
+            <div style={{height: '200px'}}></div>
             <div className='input-container'>
-                <div className='words-to-type'>{lyrics[position].split(' ').map(word => <span className='word-2-type'>{word}</span>)}</div>
+                <div className='words-to-type'>{ lyrics[position] ? lyrics[position].split(' ').map(word => <span className='word-2-type'>{word}</span>) : null}</div>
                 <Form className='typing-input'>
-                    <Form.Control style={{width:'700px', marginLeft: '-116px'}} size='lg' type='text' onChange={handleInput} value={input}/>
+                    <Form.Control ref={typingInput} style={{width:'700px', marginLeft: '-116px'}} size='lg' type='text' onChange={handleInput} value={input}/>
                 </Form>
             </div>
-                <div className='wpm'>{wpm}</div>
                 <div className='wpm-corner'>{wpm}</div>
             </>
                 : newRace ?

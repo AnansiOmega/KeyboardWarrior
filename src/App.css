@@ -1,42 +1,42 @@
 @-webkit-keyframes slide-in-right {
   from {
     -webkit-transform: translateX(1000px) rotate(2000deg);
-    -webkit-opacity: 0%;
+    -webkit-opacity: 0;
   }
   to {
     -webkit-transform: translateX(0px) rotate(0deg);
-    -webkit-opacity: 100%;
+    -webkit-opacity: 1;
   }
 }
 @-moz-keyframes slide-in-right {
   from {
     -moz-transform: translateX(1000px) rotate(2000deg);
-    -moz-opacity: 0%;
+    -moz-opacity: 0;
   }
   to {
     -moz-transform: translateX(0px) rotate(0deg);
-    -moz-opacity: 100%;
+    -moz-opacity: 1;
   }
 }
 @-o-keyframes slide-in-right {
   from {
     -o-transform: translateX(1000px) rotate(2000deg);
-    -o-opacity: 0%;
+    -o-opacity: 0;
   }
   to {
     -o-transform: translateX(0px) rotate(0deg);
-    -o-opacity: 100%;
+    -o-opacity: 1;
   }
 }
 
 @keyframes slide-in-right {
   from {
     transform: translateX(1000px) rotate(2000deg);
-    opacity: 0% !important;
+    opacity: 0;
   }
   to {
     transform: translateX(0px) rotate(0deg);
-    opacity: 100% !important;
+    opacity: 1;
   }
 }
 
@@ -131,42 +131,42 @@ span{
 @-webkit-keyframes slide-out-left {
   from {
     -webkit-transform: translateY(0px) rotate(0deg);
-    -webkit-opacity: 100%;
+    -webkit-opacity: 1;
   }
   to {
     -webkit-transform: translateY(-100px) rotate(-720deg);
-    -webkit-opacity: 0%;
+    -webkit-opacity: 0;
   }
 }
 @-moz-keyframes slide-out-left {
   from {
     -moz-transform: translateY(0px) rotate(0deg);
-    -moz-opacity: 100%;
+    -moz-opacity: 1;
   }
   to {
     -moz-transform: translateY(-100px) rotate(-720deg);
-    -moz-opacity: 0%;
+    -moz-opacity: 0;
   }
 }
 @-o-keyframes slide-out-left {
   from {
     -o-transform: translateY(0px) rotate(0deg);
-    -o-opacity: 100%;
+    -o-opacity: 1;
   }
   to {
     -o-transform: translateY(-100px) rotate(-720deg);
-    -o-opacity: 0%;
+    -o-opacity: 0;
   }
 }
 
 @keyframes slide-out-left {
   from {
     transform: translateY(0px) rotate(0deg);
-    opacity: 100% !important;
+    opacity: 1;
   }
   to {
     transform: translateY(-100px) rotate(-720deg);
-    opacity: 0% !important;
+    opacity: 0;
   }
 }
 

@@ -11,6 +11,8 @@
 
 .slide-in-word {
   animation: slide-in-right 3s forwards;
+  -webkit-animation: slide-in-right 3s forwards;
+  -moz-animation: slide-in-right 3s forwards;
   position: relative;
   display: inline-block;
 }
@@ -99,6 +101,8 @@ span{
 
 span.good {
   animation: slide-out-left 2s forwards;
+  -webkit-animation: slide-out-left 2s forwards;
+  -moz-animation: slide-out-left 2s forwards;
   display: inline-block;
 }
 

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/KeyboardWarrior/static/css/main.245ce6ea.chunk.css",
+    "main.css": "/KeyboardWarrior/static/css/main.1e3498c7.chunk.css",
     "main.js": "/KeyboardWarrior/static/js/main.b3b2b799.chunk.js",
     "main.js.map": "/KeyboardWarrior/static/js/main.b3b2b799.chunk.js.map",
     "runtime-main.js": "/KeyboardWarrior/static/js/runtime-main.80c2bb16.js",
@@ -12,7 +12,7 @@
     "static/js/3.eb07d5e7.chunk.js.map": "/KeyboardWarrior/static/js/3.eb07d5e7.chunk.js.map",
     "index.html": "/KeyboardWarrior/index.html",
     "static/css/2.57bc5ad1.chunk.css.map": "/KeyboardWarrior/static/css/2.57bc5ad1.chunk.css.map",
-    "static/css/main.245ce6ea.chunk.css.map": "/KeyboardWarrior/static/css/main.245ce6ea.chunk.css.map",
+    "static/css/main.1e3498c7.chunk.css.map": "/KeyboardWarrior/static/css/main.1e3498c7.chunk.css.map",
     "static/js/2.b4b38dc5.chunk.js.LICENSE.txt": "/KeyboardWarrior/static/js/2.b4b38dc5.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/KeyboardWarrior/static/media/outline-icons.ddae9b1b.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.80c2bb16.js",
     "static/css/2.57bc5ad1.chunk.css",
     "static/js/2.b4b38dc5.chunk.js",
-    "static/css/main.245ce6ea.chunk.css",
+    "static/css/main.1e3498c7.chunk.css",
     "static/js/main.b3b2b799.chunk.js"
   ]
 }

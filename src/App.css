@@ -161,10 +161,10 @@ span{
 }
 
 span.good {
-  animation: slide-out-left 2s forwards;
-  -webkit-animation: slide-out-left 2s forwards;
-  -moz-animation: slide-out-left 2s forwards;
-  -o-animation: slide-out-left 2s forwards;
+  animation: slide-out-left 2s;
+  -webkit-animation: slide-out-left 2s;
+  -moz-animation: slide-out-left 2s;
+  -o-animation: slide-out-left 2s;
   display: inline-block;
 }
 

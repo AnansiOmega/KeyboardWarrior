@@ -10,7 +10,7 @@ export const Home = ({changeBackground, light, color}) => {
     const [ delay, setDelay] = useState(1000)
     const [ lyrics, setLyrics ] = useState(['hi']);
     useEffect(() => {
-        if(position === lyrics.length){
+        if(position === lyrics.length){ // checks to see if the race is completed
             setDelay(null)
             setNewRace(false)
             setStartRace(false)
@@ -21,7 +21,7 @@ export const Home = ({changeBackground, light, color}) => {
     const [ startRace, setStartRace ] = useState(false);
     const [ timer, setTimer ] = useState(0);
     useInterval(() => {
-        if(startRace){
+        if(startRace){ // sets a timer when the user selects a song
             setTimer(timer + 1);
         };
     }, delay);
@@ -35,58 +35,58 @@ export const Home = ({changeBackground, light, color}) => {
     const [ typedArr, setTypedArr ] = useState([])
     const typingInput = useRef(null)
 
-    const handleInput = (e) => {
+    const handleInput = (e) => { 
         setInput(e.target.value);
-        if( input ===  lyrics[position].split(' ')[word] ){
-            document.getElementsByClassName('word-2-type')[0].className = 'good'
-            window.scrollTo(0,document.body.scrollHeight);
-            setWord(word + 1);
+        if( input ===  lyrics[position].split(' ')[word] ){ // checks to see if users input matches the word at lyrics[position] first line word
+            document.getElementsByClassName('word-2-type')[0].className = 'good' // if it matches we change previous word to 'good' to run animation
+            window.scrollTo(0,document.body.scrollHeight); // I scroll down and move the position to the next word and adjust wpm
+            setWord(word + 1); 
             setTypedArr([ ...typedArr, lyrics[position].split(' ')[word]])
             setWordCount(wordCount + 1);
             setInput('');
         };
     };
 
-    if (word === lyrics[position]?.split(' ').length){
+    if (word === lyrics[position]?.split(' ').length){ // if user gets to the end of the line, then i reset 'good' to 'word-2-type' and give user next line
         Array.from(document.getElementsByClassName('good')).forEach(span => span.className = 'word-2-type')
         setPosition(position + 1);
-        setTypedArr([...typedArr, '( ._.)'])
+        setTypedArr([...typedArr, '( ._.)']) // add's in face, so that i know where to break ( for a new line )
         setWord(0);
     };
 
-    const renderLines = () => {
+    const renderLines = () => { // takes the typed array, and render them to the page
         return typedArr.map(word => {
-            if(word === '( ._.)') return <br></br>
+            if(word === '( ._.)') return <br></br> // if there's a face then I break to the next line. couldn't figure out a better way to do this other than a conditional
         return <span className='slide-in-word'>{word}</span>
     })
     }
     
 
 
-    const handleChange = (e) => {
+    const handleChange = (e) => { // takes in users choice of song and artist
         e.target.name === 'artist' ? setArtist(e.target.value) : setTrack(e.target.value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => { // fetches what the user selects to type
         e.preventDefault()
         fetch(`https://api.lyrics.ovh/v1/${artist}/${track}`)
         .then(resp => resp.json())
         .then(data => {
-            if(data.lyrics === ""){
+            if(data.lyrics === ""){ // if api returns nothing render an error
                 setError(true)
                 return
             };
-            const splitLyrics = data.lyrics.split(/\r?\n/).map(line => line.trim()).filter(line => line !== "");
+            const splitLyrics = data.lyrics.split(/\r?\n/).map(line => line.trim()).filter(line => line !== ""); // clean up the lyrics so they are presentable
             setLyrics(splitLyrics);
             setNewRace(false);
             setStartRace(true);
-            setDelay(1000);
+            setDelay(1000); // the race begins
             setError(false)
             typingInput.current.focus()
         })
     }
 
-    const reset = () => {
+    const reset = () => { // resets all of the hooks for a new race
         setPosition(0);
         setWordCount(0);
         setTimer(0);

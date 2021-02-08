@@ -40,10 +40,19 @@
 }
 
 .slide-in-word {
-  -webkit-animation: slide-in-right 3s forwards;
-  -moz-animation: slide-in-right 3s forwards;
-  -o-animation: slide-in-right 3s forwards;
-  animation: slide-in-right 3s forwards;
+  -webkit-animation-name: slide-in-right;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: slide-in-right;
+  -moz-animation-duration: 3s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-name: slide-in-right;
+  -o-animation-duration: 3s;
+  -o-animation-fill-mode: forwards;
+  animation-name: slide-in-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  /* animation: slide-in-right 3s forwards; */
   position: relative;
   display: inline-block;
 }
@@ -161,10 +170,19 @@ span{
 }
 
 span.good {
-  -webkit-animation: slide-out-left 2s forwards;
-  -moz-animation: slide-out-left 2s forwards;
-  -o-animation: slide-out-left 2s forwards;
-  animation: slide-out-left 2s forwards;
+  -webkit-animation-name: slide-out-left;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: slide-out-left;
+  -moz-animation-duration: 2s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-name: slide-out-left;
+  -o-animation-duration: 2s;
+  -o-animation-fill-mode: forwards;
+  animation-name: slide-out-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* animation: slide-out-left 2s forwards; */
   display: inline-block;
 }
 

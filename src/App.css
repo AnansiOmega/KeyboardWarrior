@@ -40,10 +40,10 @@
 }
 
 .slide-in-word {
-  animation: slide-in-right 3s forwards;
   -webkit-animation: slide-in-right 3s forwards;
   -moz-animation: slide-in-right 3s forwards;
   -o-animation: slide-in-right 3s forwards;
+  animation: slide-in-right 3s forwards;
   position: relative;
   display: inline-block;
 }
@@ -161,10 +161,10 @@ span{
 }
 
 span.good {
-  animation: slide-out-left 2s;
-  -webkit-animation: slide-out-left 2s;
-  -moz-animation: slide-out-left 2s;
-  -o-animation: slide-out-left 2s;
+  -webkit-animation: slide-out-left 2s forwards;
+  -moz-animation: slide-out-left 2s forwards;
+  -o-animation: slide-out-left 2s forwards;
+  animation: slide-out-left 2s forwards;
   display: inline-block;
 }
 

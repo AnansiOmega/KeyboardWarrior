@@ -128,7 +128,7 @@ span{
   margin: .3rem;
 }
 
-@-webkit-keyframes slide-out-left {
+@-webkit-keyframes pop-upwards {
   from {
     -webkit-transform: translateY(0px) rotate(0deg);
     -webkit-opacity: 1;
@@ -138,7 +138,7 @@ span{
     -webkit-opacity: 0;
   }
 }
-@-moz-keyframes slide-out-left {
+@-moz-keyframes pop-upwards {
   from {
     -moz-transform: translateY(0px) rotate(0deg);
     -moz-opacity: 1;
@@ -148,7 +148,7 @@ span{
     -moz-opacity: 0;
   }
 }
-@-o-keyframes slide-out-left {
+@-o-keyframes pop-upwards {
   from {
     -o-transform: translateY(0px) rotate(0deg);
     -o-opacity: 1;
@@ -159,7 +159,7 @@ span{
   }
 }
 
-@keyframes slide-out-left {
+@keyframes pop-upwards {
   from {
     transform: translateY(0px) rotate(0deg);
     opacity: 1;
@@ -171,19 +171,18 @@ span{
 }
 
 span.good {
-  -webkit-animation-name: slide-out-left;
+  -webkit-animation-name: pop-upwards;
   -webkit-animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
-  -moz-animation-name: slide-out-left;
+  -moz-animation-name: pop-upwards;
   -moz-animation-duration: 2s;
   -moz-animation-fill-mode: forwards;
-  -o-animation-name: slide-out-left;
+  -o-animation-name: pop-upwards;
   -o-animation-duration: 2s;
   -o-animation-fill-mode: forwards;
-  animation-name: slide-out-left;
+  animation-name: pop-upwards;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  /* animation: slide-out-left 2s forwards; */
   display: inline-block;
 }
 

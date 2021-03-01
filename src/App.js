@@ -10,12 +10,12 @@ import  Navbar  from './Components/navbar'
 
 const App = () => {
   const [lightMode, setlightMode] = useState(true)
-  useEffect(() => {
+  useEffect(() => { // checks to see if lightMode has been enabled, if so will change the background to what the state is
     lightMode ? document.body.className = 'light' : document.body.className = 'dark'
   },[lightMode])
   const [ light, setLight ] = useState(true)
 
-  const changeBackground = () => {
+  const changeBackground = () => { // propped down to light button so that background can be changed on click
     setlightMode(!lightMode)
     setLight(!light)
   }

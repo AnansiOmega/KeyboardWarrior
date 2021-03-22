@@ -4,7 +4,7 @@ This application is a typing game where the user selects an Artist and a Track. 
 
 A lightweight type racing game built from scratch! I built this project to learn and understand how React Hooks, and functional components work. I also used this application as an opportunity to incorporate more complex alogrithms without the aid of other resources. So if you spot something that can be done better I'd love to hear some feedback.
 
-Webiste: [KeyboardWarrior](https://anansiomega.github.io/KeyboardWarrior/)
+Website: [KeyboardWarrior](https://anansiomega.github.io/KeyboardWarrior/)
 
 Demo: [Youtube](https://youtu.be/We-Cq0pJOHo)
 

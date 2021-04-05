@@ -10,7 +10,7 @@ export const Home = ({changeBackground, light, color}) => {
     const [ delay, setDelay] = useState(1000)
     const [ lyrics, setLyrics ] = useState(['hi']);
     useEffect(() => {
-        if(position === lyrics.length){ // checks to see if the race is completed
+        if(position === lyrics.length){ // checks to see if the race is completed if so resets the states to original
             setDelay(null)
             setNewRace(false)
             setStartRace(false)
@@ -35,19 +35,20 @@ export const Home = ({changeBackground, light, color}) => {
     const [ typedArr, setTypedArr ] = useState([])
     const typingInput = useRef(null)
 
-    const handleInput = (e) => { 
+    const handleInput = (e) => {
         setInput(e.target.value);
-        if( input ===  lyrics[position].split(' ')[word] ){ // checks to see if users input matches the word at lyrics[position] first line word
+        let currentWord = lyrics[position].split(' ')[word]
+        if (input === currentWord) { // checks to see if users input matches the word at lyrics[position] first line word
             document.getElementsByClassName('word-2-type')[0].className = 'good' // if it matches we change previous word to 'good' to run animation
-            window.scrollTo(0,document.body.scrollHeight); // I scroll down and move the position to the next word and adjust wpm
-            setWord(word + 1); 
-            setTypedArr([ ...typedArr, lyrics[position].split(' ')[word]])
+            window.scrollTo(0, document.body.scrollHeight); // I scroll down and move the position to the next word and adjust wpm
+            setWord(word + 1);
+            setTypedArr([...typedArr, currentWord])
             setWordCount(wordCount + 1);
             setInput('');
         };
     };
 
-    if (word === lyrics[position]?.split(' ').length){ // if user gets to the end of the line, then i reset 'good' to 'word-2-type' and give user next line
+    if (word === lyrics[position]?.split(' ').length) { // if user gets to the end of the line, then i reset 'good' to 'word-2-type' and give user next line
         Array.from(document.getElementsByClassName('good')).forEach(span => span.className = 'word-2-type')
         setPosition(position + 1);
         setTypedArr([...typedArr, '( ._.)']) // add's in face, so that i know where to break ( for a new line )
@@ -56,9 +57,9 @@ export const Home = ({changeBackground, light, color}) => {
 
     const renderLines = () => { // takes the typed array, and render them to the page
         return typedArr.map(word => {
-            if(word === '( ._.)') return <br></br> // if there's a face then I break to the next line. couldn't figure out a better way to do this other than a conditional
-        return <span className='slide-in-word'>{word}</span>
-    })
+            if (word === '( ._.)') return <br></br> // if there's a face then I break to the next line. couldn't figure out a better way to do this other than a conditional
+            return <span className='slide-in-word'>{word}</span>
+        })
     }
     
 
@@ -127,7 +128,9 @@ export const Home = ({changeBackground, light, color}) => {
                 </Form>
                     : raceCompleted ?
                     <div className='final-words'> Nice, you just wrote out the song {track} by {artist} in {wpm} words per minute!<br></br> <Button size='lg' variant='dark' style={color} onClick={reset}>reset</Button></div>
-                        : <div className='race-btn'><Button style={color} size='lg' variant='dark' onClick={() => setNewRace(true)}>Start a new Race</Button></div>
+                        : <div className='race-btn'><Button style={color} size='lg' variant='dark' onClick={() => setNewRace(true)}>Start a new Race</Button>
+                        {/* <Button style={color} size='lg' variant='dark'>Tutorial</Button> */}
+                        </div>
             }
         </>
     )

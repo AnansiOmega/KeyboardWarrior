@@ -58,8 +58,19 @@
 }
 
 div.race-btn {
+  display: flex;
   text-align: center;
   margin-top: 10px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.race-btn > button {
+    width: 25vw;
+    justify-self: center;
+    align-self: center;
+    margin: 5%;
 }
 
 .song-form {

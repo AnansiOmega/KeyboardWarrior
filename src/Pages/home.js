@@ -91,7 +91,13 @@ export const Home = ({changeBackground, light, color}) => {
         fetch('https://www.poemist.com/api/v1/randompoems')
         .then(resp => resp.json())
         .then(data => {
-            debugger
+            const splitLines = data[0].content.split(/\r?\n/).map(line => line.trim()).filter(line => line !== "");
+            setLyrics (splitLines)
+            setNewRace(false);
+            setStartRace(true);
+            setDelay(1000); // the race begins
+            setError(false)
+            typingInput.current.focus()
         })
     }
 
@@ -122,8 +128,9 @@ export const Home = ({changeBackground, light, color}) => {
             <div style={{height: '200px'}}></div>
             <div className='input-container'>
                 <div className='words-to-type'>{ lyrics[position] ? lyrics[position].split(' ').map(word => <span className='word-2-type'>{word}</span>) : null}</div>
+                <div className='words-to-show'>{ lyrics[position] ? lyrics[position + 1] : null} </div>
                 <Form className='typing-input'>
-                    <Form.Control ref={typingInput} style={{width:'700px', marginLeft: '-116px'}} size='lg' type='text' onChange={handleInput} value={input}/>
+                    <Form.Control ref={typingInput} style={{width:'700px', marginLeft: '-116px', fontSize: '2rem', fontWeight: '600' }} size='lg' type='text' onChange={handleInput} value={input}/>
                 </Form>
             </div>
                 <div className='wpm-corner'>{wpm}</div>
@@ -139,7 +146,7 @@ export const Home = ({changeBackground, light, color}) => {
                 <Button className='poem-btn' style={color} size='lg' variant='dark' onClick={getPoem}>Get Random Poem</Button> 
                 </div>
                     : raceCompleted ?
-                    <div className='final-words'> Nice, you just wrote out the song {track} by {artist} in {wpm} words per minute!<br></br> <Button size='lg' variant='dark' style={color} onClick={reset}>reset</Button></div>
+                    <div className='final-words'>Nice, you just wrote out the song {track} by {artist} in {wpm} words per minute!<br></br> <Button size='lg' variant='dark' style={color} onClick={reset}>reset</Button></div>
                         : <div className='race-btn'><Button style={color} size='lg' variant='dark' onClick={() => setNewRace(true)}>Start a new Race</Button>
                         {/* <Button style={color} size='lg' variant='dark'>Tutorial</Button> */}
                         </div>

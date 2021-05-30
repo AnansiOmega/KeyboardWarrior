@@ -57,42 +57,39 @@
   display: inline-block;
 }
 
-race-btns {
+.race-btns {
+  align-self: center;
+  justify-self: center;
   display: flex;
   align-content: center;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 40rem;
+  margin-right: 40rem;
 }
 
-div.race-btn {
+.song-form > button {
+  width: -webkit-fill-available;
+}
+
+.poem-btn {
+  margin-top: 5rem;
+}
+
+.race-btn {
   display: flex;
-  text-align: center;
-  margin-top: 10px;
-  justify-content: center;
-  align-content: center;
   flex-direction: column;
 }
 
-poem-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .race-btn > button {
-    width: 25vw;
-    justify-self: center;
-    align-self: center;
-    margin: 5%;
+  align-self: center;
+  justify-self: center;
 }
 
-.song-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 500px;
-  margin: 0 auto;
-  padding-top: 200px;
+
+.race-btn > button {
+  align-self: center;
+  justify-self: center;
 }
 
 .typing-input {
@@ -103,7 +100,8 @@ poem-btn {
 div.words-to-type {
   margin: 0 auto;
   width: 700px;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 div.prev-words {

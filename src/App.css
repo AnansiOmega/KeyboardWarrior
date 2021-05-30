@@ -57,6 +57,12 @@
   display: inline-block;
 }
 
+race-btns {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 div.race-btn {
   display: flex;
   text-align: center;
@@ -66,6 +72,12 @@ div.race-btn {
   flex-direction: column;
 }
 
+poem-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .race-btn > button {
     width: 25vw;
     justify-self: center;

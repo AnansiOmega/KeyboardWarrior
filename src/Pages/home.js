@@ -87,6 +87,15 @@ export const Home = ({changeBackground, light, color}) => {
         })
     }
 
+    const getPoem = () => {
+        fetch('https://www.poemist.com/api/v1/randompoems')
+        .then(resp => resp.json())
+        .then(data => {
+            debugger
+        })
+    }
+
+
     const reset = () => { // resets all of the hooks for a new race
         setPosition(0);
         setWordCount(0);
@@ -120,12 +129,15 @@ export const Home = ({changeBackground, light, color}) => {
                 <div className='wpm-corner'>{wpm}</div>
             </>
                 : newRace ?
+                <div className='race-btns'> 
                 <Form className='song-form' onSubmit={handleSubmit}>
                     <Form.Control size='lg' onChange={handleChange} placeholder="Artist" type='text' value={artist} name='artist'/>
                     <Form.Control size='lg' onChange={handleChange} placeholder="Track" type='text' value={track} name='track'/>
                     <Button style={color} variant='dark' size='lg' type='submit'>Start</Button>
                     { error ? <div className='error'>Oops, I either don't know this song, or this song doesn't exist. Please try again.</div> : null } 
                 </Form>
+                <Button className='poem-btn' style={color} size='lg' variant='dark' onClick={getPoem}>Get Random Poem</Button> 
+                </div>
                     : raceCompleted ?
                     <div className='final-words'> Nice, you just wrote out the song {track} by {artist} in {wpm} words per minute!<br></br> <Button size='lg' variant='dark' style={color} onClick={reset}>reset</Button></div>
                         : <div className='race-btn'><Button style={color} size='lg' variant='dark' onClick={() => setNewRace(true)}>Start a new Race</Button>
